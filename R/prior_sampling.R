@@ -24,7 +24,7 @@
 #' @examples
 #' # Draw 5000 samples of the precision matrix for GHS prior distribution with
 #' # parameter lambda set to 1
-#' prior_sampling(5, 1e3, 5e3, 'GHS', lambda=1)
+#' ghs_samples <- prior_sampling(5, 1e3, 5e3, 'GHS', lambda=1)
 #' @export
 prior_sampling <- function(
     p, 

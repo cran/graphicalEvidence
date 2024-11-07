@@ -18,6 +18,14 @@ This package can be installed directly from github using the R package `devtools
 > install_github("dp-rho/graphicalEvidence")
 ```
 
+Alternatively, a version of this package can be installed from CRAN using:
+
+```
+> install.packages('graphicalEvidence')
+```
+
+It should be noted that the version distributed on CRAN is more portable, but also slower. The version distributed directly from GitHub attempts to force compilation with AVX/SSE flags if possible using the `RcppXsimd` package, and also attempts to compile with both LAPACKE and OpenBLAS. These interfaces are not available on some systems, and so the version distributed on CRAN uses RcppArmadillo exclusively for all linear algebra routines. The version distributed on CRAN may be anywhere from 2-10x slower.
+
 ## Description:
 This package allows estimation of marginal likelihood in Gaussian graphical models through a novel telescoping block decomposition of the precision matrix which allows estimation of model evidence via an application of Chib's [2] method. This package also provides an MCMC prior sampler for the priors of BGL, GHS, and G-Wishart.
 
@@ -28,7 +36,7 @@ First, we can use entirely pre-determined test parameters and a fixed random see
 ```
 > test_evidence(num_runs=10, 'Wishart')
 ```
-The console will display the parameters tested, as well as display the results using a histogram if more than 1 run is requested. The average computation time per run will be displayed, and the entire results vector, as well as the mean and standard deviation of this vector will be returned.
+The console will display the parameters tested, as well as display the results using a histogram if more than 1 run is requested. The average computation time per run will be displayed, and the entire results vector, as well as the mean and standard deviation of this vector will be returned. The version of graphicalEvidence distributed on CRAN will attach these outputs as elements of the return list rather than print them explicitly.
 ```
 Params are: 
 $x_mat
@@ -66,7 +74,7 @@ $results
  [1] -84.23698 -84.13235 -84.13171 -84.14765 -84.14498 -84.13035 -84.09755 -84.08554 -84.15069 -84.13690
 ```
 
-Note that results returned from `test_evidence` should be reproducible, as the random seed is reset during each call to the function. The pre-existing parameters used for these tests can be generated using the function `gen_params_evidence`. 
+Note, in the version distributed on CRAN, the results returned from `test_evidence` will be reproducible only if a random seed is passed explicitly as an argument. In the version distributed on GitHub, the random seed is reset by each call to `test_evidence` in all cases. The pre-existing parameters used for these tests can be generated using the function `gen_params_evidence`. 
 ```
 > gen_params_evidence('Wishart')
 $x_mat

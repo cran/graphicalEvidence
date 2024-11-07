@@ -10,13 +10,13 @@
   models through a novel telescoping block decomposition of the precision 
   matrix which allows estimation of model evidence via an application of 
   Chib's method. The currently implemented priors are: Bayesian graphical lasso 
-  (BGL), Graphical horseshoe (GHS), Wishart, and G-Wishart.The top level 
+  (BGL), Graphical horseshoe (GHS), Wishart, and G-Wishart. The top level 
   function used to estimate marginal likelihood is \code{\link{evidence}} which 
   expects the prior name, data, and relevant prior specific parameters. This 
   package also provides an MCMC prior sampler for the priors of BGL, GHS, and 
   G-Wishart, implemented in \code{\link{prior_sampling}}, which expects a prior 
   name and prior specific parameters. Both functions also expect the number of 
-  burnin iterations and the number of sampling iterations for the underlying 
+  burn-in iterations and the number of sampling iterations for the underlying 
   MCMC sampler.
   
   Bhadra, A., Sagar, K., Rowe, D., Banerjee, S., & Datta, J. (2022) 

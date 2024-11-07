@@ -1,4 +1,4 @@
-2ad0ddb6dfb3a70ced06078126c4188e *DESCRIPTION
+6bfca7a14b28bcd88cb5dfb645c67aa6 *DESCRIPTION
 b2bb38ece630f4c784837a50efbe8b89 *NAMESPACE
 702ed4911ab5d6966567b01bf4cd9f7a *R/G_wishart_Hao_wang.R
 3f1ec2b6fdeba4ed7fbb16e98ebb9d06 *R/G_wishart_last_col_fixed.R
@@ -10,12 +10,12 @@ f630a7aacbf0849598f2c3cee80b050d *R/evidence.R
 33fbee7d4dfcb32f7b3d58d00165addc *R/graphical_evidence_rmatrix_iteration.R
 087d1187361c7e5faf8a129a5f89e263 *R/graphical_evidence_rmatrix_last_iter.R
 97a0527ad04d340d676754208d954f76 *R/logmvgamma.R
-10e7b5466dfe8b9492a43bbe54e943a1 *R/prior_sampling.R
+29b006255879efdc26e1c2d6506e44ae *R/prior_sampling.R
 b20d0b82b1e143be822eccc0391c31c3 *R/rmatrix_Hao_Wang.R
 c144d631f7b9e8a0944472d8f031007c *R/rmatrix_last_col_fixed.R
 f7f2753587cb085d0556ca023286449e *R/set_seed_evidence.R
 914eb59f9b40992a18f42628950504d3 *R/test_evidence.R
-2ebe71e52ee75d2e8ddbb28a7c95c61f *README.md
+798732cb87fd60c197b47462b91cdd43 *README.md
 a2cfc571faac86e004f500544a2dcb53 *inst/test_params/G_mat_q_5_n_10_delta_2.csv
 d0c900976f07bc6e5d6a2d88338fe518 *inst/test_params/Scale_mat_Wishart_q_5_n_10_alpha_7.csv
 d0c900976f07bc6e5d6a2d88338fe518 *inst/test_params/Scale_mat_q_5_n_10_alpha_7.csv
@@ -26,10 +26,10 @@ e6a1e11d1ba744ca114d180e45f6e5c6 *inst/test_params/X_mat_Wishart_q_5_n_10_alpha_
 a470d9e6dc00e3a2b127b9fe78e1c389 *inst/test_params/X_mat_q_5_n_10_delta_2.csv
 df099bca9e97c3dc9e0fd8f35a22735e *man/evidence.Rd
 8f3661954506b928c6fecce662373a6b *man/gen_params_evidence.Rd
-61c19b9aa24a31e57d01be9be5a7b21f *man/graphicalEvidence-package.Rd
+e3f4944fe1706f089b0df8b78fa2b43b *man/graphicalEvidence-package.Rd
 3ccc0405052af8ea34bb8cd92da39587 *man/graphical_evidence_G_Wishart.Rd
 8836a9f86c79e01888f612b59c841448 *man/graphical_evidence_rmatrix.Rd
-759cb44f35e1d299a24fc9276230b379 *man/prior_sampling.Rd
+246201e82dff6f65c00a868c64a67cf5 *man/prior_sampling.Rd
 d170ea844e58844a5b9b8cd52e9cb7e2 *man/set_seed_evidence.Rd
 cdb6eab16af1284d923dc1f9b6b24f45 *man/test_evidence.Rd
 0f6cbb75b06c9585d98866ba6b0c28d1 *src/GammaSampler.cpp
@@ -44,7 +44,7 @@ a2e28e45f58ffa59d2d67b04063769dc *src/gigrnd.cpp
 9516149a00ee71aef98850893e4ad90b *src/global_storage.cpp
 9b7297251febcec43db4a80a6fcfde2d *src/global_storage.h
 dfec4edc81b2666db59e29713416a847 *src/graphical_evidence.h
-9e0517a1fc9810ab95afc3986abea97b *src/initialize_indices.cpp
+fd4b2e03b73cc1a0cc8b2eb7de0eb06b *src/initialize_indices.cpp
 978670d68dbefb424c21eb52184a0ca5 *src/looping_dmvnrm_arma.cpp
 07094be3af4c96d4fa407a206f5a0c73 *src/looping_dmvnrm_arma.h
 b1c014ab07eed1090e71ec1dcff6cebc *src/mcmc_hw.cpp
@@ -65,4 +65,4 @@ db4a5fba47dac1b852135283a9483c87 *src/sample_omega_hw.cpp
 10014eceedaf49293fd56557d9bcc91c *src/simd_intrinsics.h
 5674809f10b124d5b9a626ce207ee02f *src/solve_mu_reduced_hw.cpp
 c95ac7c3c86d1fa0dd4a0d4309690a56 *src/update_omega_inplace.cpp
-d38cb556b0d588bff7a15e6cc65f0dc6 *src/update_sigma_inplace.cpp
+75c8b2b24ab60b80e0d793c304c421c9 *src/update_sigma_inplace.cpp

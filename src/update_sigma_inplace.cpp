@@ -192,7 +192,7 @@ void update_sigma_inplace(
 #else
 
   /* Same calculation with no explicit SIMD, i.e., one iteration at a time  */
-  update_sigma_inplace(
+  update_sigma_inplace_no_simd(
     sigma, inv_omega_11, omega_beta, ind_noi, gamma_param, p, ith
   );
 

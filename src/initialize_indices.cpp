@@ -14,13 +14,16 @@ void initialize_indices(
   /* indices by excluding row i, then identifying which ones  */
   /* and zeros are present in the ith excluded linspace       */
   arma::uword n = ind_noi_mat.n_cols;
-  arma::uvec noi_indices;
+  arma::uvec noi_indices(n - 1);
   for (arma::uword i = 0; i < n; i++) {
 
     /* All indices except the ith row for iteration i */
-    arma::uvec noi_indices = arma::linspace<arma::uvec>(0, n - 1, n);
-    noi_indices.shed_row(i);
-    ind_noi_mat.col(i) = noi_indices;
+    arma::uword k = 0;
+    for (arma::uword j = 0; j < n; j++) {
+      if (j != i) {
+        ind_noi_mat.at(k++, i) = j;
+      }
+    }
   }
 
 }
@@ -47,13 +50,17 @@ void initialize_indices(
   /* indices by excluding row i, then identifying which ones  */
   /* and zeros are present in the ith excluded linspace       */
   arma::uword n = ind_noi_mat.n_cols;
-  arma::uvec noi_indices;
+  arma::uvec noi_indices(n - 1);
   for (arma::uword i = 0; i < n; i++) {
     
     /* All indices except the ith row for iteration i */
-    arma::uvec noi_indices = arma::linspace<arma::uvec>(0, n - 1, n);
-    noi_indices.shed_row(i);
-    ind_noi_mat.col(i) = noi_indices;
+    arma::uword k = 0;
+    for (arma::uword j = 0; j < n; j++) {
+      if (j != i) {
+        ind_noi_mat.at(k, i) = j;
+        noi_indices[k++] = j;
+      }
+    }
 
     /* Check adjacency matrix */
 
